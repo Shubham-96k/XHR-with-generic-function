@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLhttpRequest</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.min.css">
+</head>
+<body class="bg-dark">
+    <header class="bg-warning text-white p-2 d-flex align-items-center head">
+        <h1 class="flex-grow-1 text-center">XMLhttpRequest</h1>
+        <button class="btn btn-dark icon" id="showsidebar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+    
+    <aside class="sidebar" id="opensidebar">
+        <div class="cancel text-right">
+            <i class="fa-solid fa-xmark fa-2x text-white p-2" id="hidesidebar">
+            </i>
+        </div>
+        <div class="card m-4 bg-warning font-weight-bold">
+            <div class="card-header bg-dark text-white">
+                Add Post Content :
+            </div>
+            <form id="postform">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="body">Content</label>
+                        <textarea id="body" rows="4" class="form-control" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="userid">UserId :</label>
+                        <select id="userid" class="form-control">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-footer text-right bg-dark text-white">
+                    <button class="btn-danger" type="submit" id="addbtn"><strong>Add Post</strong></button>
+                    <button class="btn-success d-none" type="button" id="updatebtn"><strong>Update Post</strong></button>
+                </div>
+            </form>
+        </div>
+    </aside>
+
+    <div class="container mt-130">
+        <div class="row d-flex flex-column-reverse">
+            <div class='col-md-8 offset-md-2' id="postcontainer">
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="backdrop" id="backdrop">
+    </div>
+
+    <div class="loader d-none" id="loader">
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.all.min.js"></script>
+</body>
+</html>
